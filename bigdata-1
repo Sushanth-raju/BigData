@@ -1,0 +1,120 @@
+ushanth@sushanth:~$ mongod
+d2021-03-19T10:11:46.970+0530 I CONTROL  [initandlisten] MongoDB starting : pid=2573 port=27017 dbpath=/data/db 64-bit host=sushanth
+2021-03-19T10:11:46.970+0530 I CONTROL  [initandlisten] db version v3.6.8
+2021-03-19T10:11:46.970+0530 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+2021-03-19T10:11:46.970+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten] modules: none
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten] build environment:
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2021-03-19T10:11:46.971+0530 I CONTROL  [initandlisten] options: {}
+2021-03-19T10:11:47.726+0530 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /data/db not found., terminating
+2021-03-19T10:11:47.727+0530 I CONTROL  [initandlisten] now exiting
+2021-03-19T10:11:47.727+0530 I CONTROL  [initandlisten] shutting down with code:100
+sushanth@sushanth:~$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("6dcc961c-8b0c-451f-a276-e71b00ca4613") }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2021-03-19T10:04:47.016+0530 I STORAGE  [initandlisten] 
+2021-03-19T10:04:47.016+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2021-03-19T10:04:47.016+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2021-03-19T10:04:50.245+0530 I CONTROL  [initandlisten] 
+2021-03-19T10:04:50.245+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2021-03-19T10:04:50.245+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2021-03-19T10:04:50.245+0530 I CONTROL  [initandlisten] 
+> create db sush
+2021-03-19T10:12:26.295+0530 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:7
+> create database sush
+2021-03-19T10:12:43.665+0530 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:7
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use sush
+switched to db sush
+> db
+sush
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> 
+> 
+> db.dropdatabase();
+2021-03-19T10:18:31.290+0530 E QUERY    [thread1] TypeError: db.dropdatabase is not a function :
+@(shell):1:1
+> db.dropDatabase();
+{ "ok" : 1 }
+> db
+sush
+> use mydb
+switched to db mydb
+> db.dropDatabase();
+{ "ok" : 1 }
+> db
+mydb
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use mydb
+switched to db mydb
+> show collections
+> Show collections
+2021-03-19T10:20:25.351+0530 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:5
+> show collections
+> db.Students.insert({_id:1,StudRollNo:'s101',StudName:'Simon David', Grade:'VII',Hobbbies:'Net Surfing',DOJ:'10-Oct-2012'});
+WriteResult({ "nInserted" : 1 })
+> db.Students.update({},{$set:{Hobbies:'Ice Hockey'}),{multi:true})
+2021-03-19T10:28:55.933+0530 E QUERY    [thread1] SyntaxError: missing } after property list @(shell):1:50
+> db.Students.find()
+{ "_id" : 1, "StudRollNo" : "s101", "StudName" : "Simon David", "Grade" : "VII", "Hobbbies" : "Net Surfing", "DOJ" : "10-Oct-2012" }
+> 
+> 
+> 
+> 
+> db.createCollection("test")
+{ "ok" : 1 }
+> show collections
+Students
+test
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+mydb    0.000GB
+> 
+> db.myCollection.insert({sname:"john",USN:"01)})
+2021-03-19T10:35:49.054+0530 E QUERY    [thread1] SyntaxError: unterminated string literal @(shell):1:41
+> db.Students.insert({sname:"john",USN:"01)})
+2021-03-19T10:36:18.419+0530 E QUERY    [thread1] SyntaxError: unterminated string literal @(shell):1:37
+> db.Students.find({},{_id:1});
+{ "_id" : 1 }
+> db.Students.find({_id:1});
+{ "_id" : 1, "StudRollNo" : "s101", "StudName" : "Simon David", "Grade" : "VII", "Hobbbies" : "Net Surfing", "DOJ" : "10-Oct-2012" }
+> show collections
+Students
+test
+> db.Students.find({Grade:1});
+> db.Students.find({Grade:VII});
+2021-03-19T10:53:38.668+0530 E QUERY    [thread1] ReferenceError: VII is not defined :
+@(shell):1:19
+> db.Students.find({Grade:'VII'});
+{ "_id" : 1, "StudRollNo" : "s101", "StudName" : "Simon David", "Grade" : "VII", "Hobbbies" : "Net Surfing", "DOJ" : "10-Oct-2012" }
+> db.Students.findOne()
+{
+	"_id" : 1,
+	"StudRollNo" : "s101",
+	"StudName" : "Simon David",
+	"Grade" : "VII",
+	"Hobbbies" : "Net Surfing",
+	"DOJ" : "10-Oct-2012"
+}
+> ^C
+bye
+sushanth@sushanth:~$ 
+
+

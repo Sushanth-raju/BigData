@@ -1,0 +1,138 @@
+sushanth@sushanth:~$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("277f9ee9-9bd7-432e-89fe-c4b93ab0b9a6") }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2021-04-07T09:11:06.426+0530 I STORAGE  [initandlisten] 
+2021-04-07T09:11:06.426+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2021-04-07T09:11:06.427+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2021-04-07T09:11:13.874+0530 I CONTROL  [initandlisten] 
+2021-04-07T09:11:13.874+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2021-04-07T09:11:13.874+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2021-04-07T09:11:13.874+0530 I CONTROL  [initandlisten] 
+> use myCol
+switched to db myCol
+> show collections
+> db.createCollection("emp)
+2021-04-07T09:29:21.827+0530 E QUERY    [thread1] SyntaxError: unterminated string literal @(shell):1:20
+> db.createCollection("emp")
+{ "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+myCol   0.000GB
+mydb    0.000GB
+> use company
+switched to db company
+> db.createCollection("employee")
+{ "ok" : 1 }
+> db.employee.insertMany({ "_id" : 8752, "title" : "Divine Comedy", "author" : "Dante", "copies" : 2, "place" : "uk", "year" : 2131 }
+... { "_id" : 7000, "title" : "The Odyssey", "author" : "Homer", "copies" : 10, "year" : 2021 }
+... { "_id" : 7020, "title" : "Iliad", "author" : "Homer", "copies" : 10 }
+... { "_id" : 8645, "title" : "Eclogues", "author" : "Dante", "copies" : 2 }
+... { "_id" : 8751, "title" : "The Banquet", "author" : "Dante", "copies" : 2 }
+... 
+... ^C
+
+> db.employee.insertMany({ "_id" : 8752, "title" : "Divine Comedy", "author" : "Dante", "copies" : 2},{ "_id" : 7000, "title" : "The Odyssey", "author" : "Homer", "copies" : 10 },{ "_id" : 7020, "title" : "Iliad", "author" : "Homer", "copies" : 10 },{ "_id" : 8645, "title" : "Eclogues", "author" : "Dante", "copies" : 2 },{ "_id" : 8751, "title" : "The Banquet", "author" : "Dante", "copies" : 2 });
+2021-04-07T09:34:26.910+0530 E QUERY    [thread1] TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:295:1
+@(shell):1:1
+> db.employee.insertMany({ _id : 8752, title : "Divine Comedy", author : "Dante", copies : 2});
+2021-04-07T09:36:03.350+0530 E QUERY    [thread1] TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:295:1
+@(shell):1:1
+> db.employee.insert({ _id : 8752, title : "Divine Comedy", author : "Dante", copies : 2});
+WriteResult({ "nInserted" : 1 })
+> db.employee.insert({ _id : 7000, title : "The Odyssey", author : "Homer", copies : 10 });
+WriteResult({ "nInserted" : 1 })
+> db.employee.insert({ _id : 8751, title : "The BAnquet", author : "helqu", copies : 2 });
+WriteResult({ "nInserted" : 1 })
+> db.employee.insert({ _id : 7020, title : "The paradise", author : "helqu", copies : 10 });
+WriteResult({ "nInserted" : 1 })
+> db.employee.aggregate([{ $match: {copies:10}}])
+{ "_id" : 7000, "title" : "The Odyssey", "author" : "Homer", "copies" : 10 }
+{ "_id" : 7020, "title" : "The paradise", "author" : "helqu", "copies" : 10 }
+> db.orders.aggregate([
+...    { $match: { status: "A" } },
+...    { $group: { _id: "$cust_id", total: { $sum: "$amount" } } }
+... ])
+> db.employee.aggregate([   { $match: { copies: "10" } },{ $group: { _id: "$cust_id", total:{$sum: "$copies" } } }
+... ^C
+
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: { _id: "$cust_id", total: { $sum: "$amount" } } } ])
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: { _id: "$cust_id", total: { $sum: "$copies" } } } ])
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: { _id: "7020", total: { $sum: "$copies" } } } ])
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: { author:"helqu", total: { $sum: "$copies" } } } ])
+assert: command failed: {
+	"ok" : 0,
+	"errmsg" : "The field 'author' must be an accumulator object",
+	"code" : 40234,
+	"codeName" : "Location40234"
+} : aggregate failed
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:16:14
+assert.commandWorked@src/mongo/shell/assert.js:403:5
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1212:12
+@(shell):1:1
+
+2021-04-07T09:44:43.667+0530 E QUERY    [thread1] Error: command failed: {
+	"ok" : 0,
+	"errmsg" : "The field 'author' must be an accumulator object",
+	"code" : 40234,
+	"codeName" : "Location40234"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:16:14
+assert.commandWorked@src/mongo/shell/assert.js:403:5
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1212:12
+@(shell):1:1
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: { author:"helqu" } } ])
+assert: command failed: {
+	"ok" : 0,
+	"errmsg" : "The field 'author' must be an accumulator object",
+	"code" : 40234,
+	"codeName" : "Location40234"
+} : aggregate failed
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:16:14
+assert.commandWorked@src/mongo/shell/assert.js:403:5
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1212:12
+@(shell):1:1
+
+2021-04-07T09:45:52.254+0530 E QUERY    [thread1] Error: command failed: {
+	"ok" : 0,
+	"errmsg" : "The field 'author' must be an accumulator object",
+	"code" : 40234,
+	"codeName" : "Location40234"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:16:14
+assert.commandWorked@src/mongo/shell/assert.js:403:5
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1212:12
+@(shell):1:1
+> db.orders.aggregate([    { $match: { status: "A" } },    { $group: author:"helqu" } ])
+2021-04-07T09:46:19.159+0530 E QUERY    [thread1] SyntaxError: missing } after property list @(shell):1:73
+> db.employee.distinct("authors")
+[ ]
+> db.employee.distinct(["authors"]);
+2021-04-07T09:47:22.560+0530 E QUERY    [thread1] Error: The first argument to the distinct command must be a string but was a object :
+DBCollection.prototype.distinct@src/mongo/shell/collection.js:1605:1
+@(shell):1:1
+> db.employee.distinct(["authors"])
+2021-04-07T09:47:26.079+0530 E QUERY    [thread1] Error: The first argument to the distinct command must be a string but was a object :
+DBCollection.prototype.distinct@src/mongo/shell/collection.js:1605:1
+@(shell):1:1
+> db.employee.distinct("authors");
+[ ]
+> db.employee.distinct("_id");
+[ 7000, 7020, 8751, 8752 ]
+> 
+
+
