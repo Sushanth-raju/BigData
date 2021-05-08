@@ -1,0 +1,108 @@
+hdoop@sushanth:~$ cd hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ ./start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as hdoop in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [sushanth]
+2021-05-05 10:09:18,928 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting resourcemanager
+Starting nodemanagers
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+2021-05-05 10:10:08,991 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: `.': No such file or directory
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ pwd
+/home/hdoop/hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -mkdir -p /user/hdoop
+2021-05-05 10:11:31,700 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd ~
+hdoop@sushanth:~$ sudo nano ~/.bashrc
+[sudo] password for hdoop: 
+hdoop@sushanth:~$ cd hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+2021-05-05 10:16:59,566 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ ./start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as hdoop in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+localhost: namenode is running as process 3288.  Stop it first.
+Starting datanodes
+localhost: datanode is running as process 3412.  Stop it first.
+Starting secondary namenodes [sushanth]
+sushanth: secondarynamenode is running as process 3593.  Stop it first.
+2021-05-05 10:19:45,809 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting resourcemanager
+resourcemanager is running as process 3844.  Stop it first.
+Starting nodemanagers
+localhost: nodemanager is running as process 3967.  Stop it first.
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+2021-05-05 10:19:57,417 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -mkdir -p /user/hdoop
+2021-05-05 10:20:23,582 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -mkdir sushanth
+2021-05-05 10:20:43,356 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+2021-05-05 10:20:54,190 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+drwxr-xr-x   - hdoop supergroup          0 2021-05-05 10:20 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ sudo nano ~/.bashrc
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ source ~/.bashrc
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ ./stop-all.sh
+WARNING: Stopping all Apache Hadoop daemons as hdoop in 10 seconds.
+WARNING: Use CTRL-C to abort.
+Stopping namenodes on [localhost]
+Stopping datanodes
+Stopping secondary namenodes [sushanth]
+Stopping nodemanagers
+Stopping resourcemanager
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ ./start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as hdoop in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [sushanth]
+Starting resourcemanager
+Starting nodemanagers
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+Found 1 items
+drwxr-xr-x   - hdoop supergroup          0 2021-05-05 10:20 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ jps
+6832 ResourceManager
+6978 NodeManager
+6275 NameNode
+6646 SecondaryNameNode
+6412 DataNode
+7375 Jps
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd sushanth
+bash: cd: sushanth: No such file or directory
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -mkdir sushanth
+mkdir: `sushanth': File exists
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd sushanth
+bash: cd: sushanth: No such file or directory
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -touchz file1.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -touchz file2.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+Found 3 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-05 10:20 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -touchz sushanth/file1.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls sushanth/
+Found 1 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:40 sushanth/file1.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -touchz sushanth/file2.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls sushanth/
+Found 2 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:40 sushanth/file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:41 sushanth/file2.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ 
+
+
