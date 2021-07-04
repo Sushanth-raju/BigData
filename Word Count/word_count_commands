@@ -1,0 +1,577 @@
+hdoop@sushanth:~$ [12-05 10:39 am] Mahesh Kumar
+[12-05: command not found
+hdoop@sushanth:~$     sudo apt install snapd
+[sudo] password for hdoop: 
+Sorry, try again.
+[sudo] password for hdoop: 
+sudo: 1 incorrect password attempt
+hdoop@sushanth:~$ sudo apt install snapd
+[sudo] password for hdoop: 
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+hdoop@sushanth:~$ sudo dpkg --configure -a
+Setting up openvpn (2.4.7-1ubuntu2.20.04.2) ...
+ * Restarting virtual private network daemon.                                                          [ OK ] 
+Setting up firefox (88.0.1+build1-0ubuntu0.20.04.2) ...
+Please restart all running instances of firefox, or you will experience problems.
+Setting up bind9-libs:amd64 (1:9.16.1-0ubuntu2.8) ...
+Setting up alsa-ucm-conf (1.2.2-1ubuntu0.7) ...
+Setting up linux-firmware (1.187.12) ...
+update-initramfs: Generating /boot/initrd.img-5.8.0-50-generic
+update-initramfs: Generating /boot/initrd.img-5.8.0-48-generic
+Setting up python3-problem-report (2.20.11-0ubuntu27.17) ...
+Setting up gjs (1.64.5-0ubuntu0.20.04.01) ...
+Setting up libgnome-autoar-0-0:amd64 (0.2.3-2ubuntu0.3) ...
+Setting up libuno-sal3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libjavascriptcoregtk-4.0-18:amd64 (2.32.0-0ubuntu0.20.04.1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-73.82) ...
+Setting up python3-yaml (5.3.1-1ubuntu0.1) ...
+Setting up gstreamer1.0-gtk3:amd64 (1.16.2-1ubuntu2.1) ...
+Setting up libreoffice-style-tango (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up gir1.2-javascriptcoregtk-4.0:amd64 (2.32.0-0ubuntu0.20.04.1) ...
+Setting up libldap-common (2.4.49+dfsg-2ubuntu1.8) ...
+Setting up libwbclient0:amd64 (2:4.11.6+dfsg-0ubuntu1.8) ...
+Setting up python3-apport (2.20.11-0ubuntu27.17) ...
+Setting up libexiv2-27:amd64 (0.27.2-8ubuntu2.2) ...
+Setting up grub-common (2.04-1ubuntu26.11) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up libasound2-data (1.2.2-2.1ubuntu2.4) ...
+Setting up libreoffice-style-colibre (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libgstreamer-plugins-good1.0-0:amd64 (1.16.2-1ubuntu2.1) ...
+Setting up firefox-locale-en (88.0.1+build1-0ubuntu0.20.04.2) ...
+Setting up openjdk-8-jre-headless:amd64 (8u292-b10-0ubuntu1~20.04) ...
+Installing new version of config file /etc/java-8-openjdk/security/java.security ...
+Setting up libreoffice-style-breeze (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libpci3:amd64 (1:3.6.4-1ubuntu0.20.04.1) ...
+Setting up gnome-shell-extension-appindicator (33.1-0ubuntu0.20.04.2) ...
+Setting up libwebkit2gtk-4.0-37:amd64 (2.32.0-0ubuntu0.20.04.1) ...
+Setting up libasound2:amd64 (1.2.2-2.1ubuntu2.4) ...
+Setting up thunderbird (1:78.8.1+build1-0ubuntu0.20.04.1) ...
+Setting up gstreamer1.0-pulseaudio:amd64 (1.16.2-1ubuntu2.1) ...
+Setting up libunoloader-java (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up bind9-host (1:9.16.1-0ubuntu2.8) ...
+Setting up libatopology2:amd64 (1.2.2-2.1ubuntu2.4) ...
+Setting up thermald (1.9.1-1ubuntu0.4) ...
+Setting up libridl-java (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libprocps8:amd64 (2:3.3.16-1ubuntu2.1) ...
+Setting up fonts-opensymbol (2:102.11+LibO6.4.7-0ubuntu0.20.04.1) ...
+Setting up libwacom-common (1.3-2ubuntu3) ...
+Setting up libreoffice-style-elementary (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up gir1.2-webkit2-4.0:amd64 (2.32.0-0ubuntu0.20.04.1) ...
+Setting up grub2-common (2.04-1ubuntu26.11) ...
+Setting up gstreamer1.0-plugins-good:amd64 (1.16.2-1ubuntu2.1) ...
+Setting up libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.8) ...
+Setting up samba-libs:amd64 (2:4.11.6+dfsg-0ubuntu1.8) ...
+Setting up openjdk-8-jre:amd64 (8u292-b10-0ubuntu1~20.04) ...
+Setting up thunderbird-locale-en (1:78.8.1+build1-0ubuntu0.20.04.1) ...
+Setting up grub-pc-bin (2.04-1ubuntu26.11) ...
+Setting up apport (2.20.11-0ubuntu27.17) ...
+apport-autoreport.service is a disabled or a static unit, not starting it.
+Setting up grub-pc (2.04-1ubuntu26.11) ...
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.8.0-50-generic
+Found initrd image: /boot/initrd.img-5.8.0-50-generic
+Found linux image: /boot/vmlinuz-5.8.0-48-generic
+Found initrd image: /boot/initrd.img-5.8.0-48-generic
+Found memtest86+ image: /boot/memtest86+.elf
+Found memtest86+ image: /boot/memtest86+.bin
+done
+Setting up thunderbird-locale-en-us (1:78.8.1+build1-0ubuntu0.20.04.1) ...
+Setting up alsa-utils (1.2.2-1ubuntu2.1) ...
+alsa-state.service is a disabled or a static unit not running, not starting it.
+Setting up openjdk-8-jdk-headless:amd64 (8u292-b10-0ubuntu1~20.04) ...
+Setting up thunderbird-gnome-support (1:78.8.1+build1-0ubuntu0.20.04.1) ...
+Setting up pciutils (1:3.6.4-1ubuntu0.20.04.1) ...
+Setting up libsmbclient:amd64 (2:4.11.6+dfsg-0ubuntu1.8) ...
+Setting up procps (2:3.3.16-1ubuntu2.1) ...
+Setting up bind9-dnsutils (1:9.16.1-0ubuntu2.8) ...
+Setting up openjdk-8-jdk:amd64 (8u292-b10-0ubuntu1~20.04) ...
+Setting up libwacom2:amd64 (1.3-2ubuntu3) ...
+Setting up libwacom-bin (1.3-2ubuntu3) ...
+Setting up apport-gtk (2.20.11-0ubuntu27.17) ...
+Setting up libuno-salhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up python3-distupgrade (1:20.04.32) ...
+Setting up libuno-cppu3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up ubuntu-release-upgrader-core (1:20.04.32) ...
+Setting up python3-update-manager (1:20.04.10.7) ...
+Setting up libuno-purpenvhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up uno-libs-private (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up update-manager-core (1:20.04.10.7) ...
+Setting up ubuntu-release-upgrader-gtk (1:20.04.32) ...
+Setting up libuno-cppuhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up update-manager (1:20.04.10.7) ...
+Setting up ure (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libjurt-java (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-common (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libjuh-java (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-core (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-math (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-gtk3 (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-pdfimport (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-draw (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-help-common (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-gnome (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-impress (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-base-core (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-help-en-us (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up python3-uno (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-ogltrans (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-calc (1:6.4.7-0ubuntu0.20.04.1) ...
+Setting up libreoffice-writer (1:6.4.7-0ubuntu0.20.04.1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for libglib2.0-0:amd64 (2.64.6-1~ubuntu20.04.3) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for systemd (245.4-4ubuntu3.6) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.1) ...
+Processing triggers for shared-mime-info (1.15-1) ...
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+hdoop@sushanth:~$ sudo apt install snapd
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+snapd is already the newest version (2.48.3+20.04).
+snapd set to manually installed.
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+hdoop@sushanth:~$ snap install eclipse --classic
+eclipse 2019-12 from Snapcrafters installed
+hdoop@sushanth:~$ cd hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hdfs dfs -mkdir /user
+mkdir: Call From sushanth/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd ..
+hdoop@sushanth:~/hadoop-3.2.1$ cd ..
+hdoop@sushanth:~$ hdfs dfs -mkdir /user
+mkdir: Call From sushanth/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hdoop@sushanth:~$ ls
+Desktop    Downloads     hadoop-3.2.1.tar.gz  new.txt   Public                   Templates  Videos
+Documents  hadoop-3.2.1  Music                Pictures  sushanth_1NT18IS058.txt  tmpdata
+hdoop@sushanth:~$ hdfs dfs -mkdir /user
+mkdir: Call From sushanth/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hdoop@sushanth:~$ hdfs dfs -mkdir /user/
+mkdir: Call From sushanth/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hdoop@sushanth:~$ hdfs dfs -ls
+ls: Call From sushanth/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+hdoop@sushanth:~$ ./start-all.sh
+bash: ./start-all.sh: No such file or directory
+hdoop@sushanth:~$ cd hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ ./start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as hdoop in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [sushanth]
+Starting resourcemanager
+Starting nodemanagers
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hdfs dfs -mkdir /user 
+mkdir: `/user': File exists
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hdfs dfs -mkdir /user/ 
+mkdir: `/user': File exists
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hdfs dfs -ls
+Found 7 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ start-dfs.sh
+Starting namenodes on [localhost]
+localhost: namenode is running as process 17551.  Stop it first.
+Starting datanodes
+localhost: datanode is running as process 17697.  Stop it first.
+Starting secondary namenodes [sushanth]
+sushanth: secondarynamenode is running as process 17871.  Stop it first.
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ start-yarn.sh
+Starting resourcemanager
+resourcemanager is running as process 18127.  Stop it first.
+Starting nodemanagers
+localhost: nodemanager is running as process 18262.  Stop it first.
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ jps
+17697 DataNode
+18262 NodeManager
+19430 Jps
+18127 ResourceManager
+17871 SecondaryNameNode
+17551 NameNode
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ eclipse
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/hdoop/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.14.0.20191209-1925.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.477: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.478: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.483: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.483: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.496: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.496: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.530: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.556: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.560: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.581: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.592: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.613: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.639: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.649: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.660: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.682: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.693: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.714: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.725: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.746: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:43.761: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:52.782: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:52.791: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.615: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.618: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.624: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.634: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.654: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.673: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.694: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.714: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.729: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.745: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.762: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.779: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.796: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.813: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.831: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.845: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.863: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.879: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-CRITICAL **: 20:22:57.897: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:19490): Gtk-WARNING **: 20:31:30.493: Negative content width -15 (allocation 1, extents 8x8) while allocating gadget (node button, owner GtkButton)
+
+(Eclipse:19490): Gtk-WARNING **: 20:31:30.493: Negative content height -8 (allocation 1, extents 4x5) while allocating gadget (node button, owner GtkButton)
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ gedit wordcount.tx
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+Found 7 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ gedit wordcount.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ gedit wordcount.tx
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ gedit wordcount.tx
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ gedit wordcount.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+Found 7 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs wordcount.txt
+wordcount.txt: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -touchz wordcount.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ hadoop fs -ls
+Found 8 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+-rw-r--r--   1 hdoop supergroup          0 2021-05-18 20:57 wordcount.txt
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd ..
+hdoop@sushanth:~/hadoop-3.2.1$ cd ..
+hdoop@sushanth:~$ cd hadoop-3.2.1/sbin
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd /home/hdoop/eclips-workspace
+bash: cd: /home/hdoop/eclips-workspace: No such file or directory
+hdoop@sushanth:~/hadoop-3.2.1/sbin$ cd /home/hdoop/eclipse-workspace
+hdoop@sushanth:~/eclipse-workspace$ ls
+prog1.jar  sush1
+hdoop@sushanth:~/eclipse-workspace$ gedit wordcount.tx
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -put wordcount.txt wordcount.txt
+put: `wordcount.txt': File exists
+hdoop@sushanth:~/eclipse-workspace$ gedit wordcount.txt
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -put wordcount.txt wordcount.txt
+put: `wordcount.txt': File exists
+hdoop@sushanth:~/eclipse-workspace$ gedit wc.txt
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -put wc.txt
+2021-05-18 21:11:38,379 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -cat wc.txt
+2021-05-18 21:12:11,870 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hello this is sushanth.
+sushanth is hello
+hello world
+is it sushanth
+hdoop@sushanth:~/eclipse-workspace$ ls
+prog1.jar  sush1  wc.txt  wordcount.tx  wordcount.txt
+hdoop@sushanth:~/eclipse-workspace$ hadoop jar prog1.jar wordcount wc.txt prog1output
+Exception in thread "main" java.lang.ClassNotFoundException: wordcount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:316)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+hdoop@sushanth:~/eclipse-workspace$ cd /home/hdoop/Desktop
+hdoop@sushanth:~/Desktop$ ls
+installation
+hdoop@sushanth:~/Desktop$ jps
+17697 DataNode
+18262 NodeManager
+20955 Jps
+18127 ResourceManager
+17871 SecondaryNameNode
+17551 NameNode
+hdoop@sushanth:~/Desktop$ hadoop jar prog1.jar wordcount wc.txt output/
+JAR does not exist or is not a normal file: /home/hdoop/Desktop/prog1.jar
+hdoop@sushanth:~/Desktop$ cd /home/hdoop/eclipse-workspace
+hdoop@sushanth:~/eclipse-workspace$ hadoop jar prog1.jar wordcount wc.txt output/
+Exception in thread "main" java.lang.ClassNotFoundException: wordcount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:316)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+hdoop@sushanth:~/eclipse-workspace$ ls
+prog1.jar  sush1  wc.txt  wordcount.tx  wordcount.txt
+hdoop@sushanth:~/eclipse-workspace$ hadoop jar prog1.jar wordcount wc.txt output
+Exception in thread "main" java.lang.ClassNotFoundException: wordcount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:316)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+hdoop@sushanth:~/eclipse-workspace$ hadoop jar prog1.jar sush1.wordcount wc.txt output
+2021-05-18 21:39:01,034 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-05-18 21:39:06,669 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2021-05-18 21:39:06,962 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hdoop/.staging/job_1621348996087_0001
+2021-05-18 21:39:07,419 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-05-18 21:39:08,862 INFO input.FileInputFormat: Total input files to process : 1
+2021-05-18 21:39:09,193 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-05-18 21:39:09,223 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-05-18 21:39:09,248 INFO mapreduce.JobSubmitter: number of splits:1
+2021-05-18 21:39:09,397 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-05-18 21:39:09,446 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1621348996087_0001
+2021-05-18 21:39:09,446 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-05-18 21:39:12,092 INFO conf.Configuration: resource-types.xml not found
+2021-05-18 21:39:12,092 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2021-05-18 21:39:14,899 INFO impl.YarnClientImpl: Submitted application application_1621348996087_0001
+2021-05-18 21:39:16,209 INFO mapreduce.Job: The url to track the job: http://sushanth:8088/proxy/application_1621348996087_0001/
+2021-05-18 21:39:16,210 INFO mapreduce.Job: Running job: job_1621348996087_0001
+2021-05-18 21:39:34,745 INFO mapreduce.Job: Job job_1621348996087_0001 running in uber mode : false
+2021-05-18 21:39:34,747 INFO mapreduce.Job:  map 0% reduce 0%
+2021-05-18 21:39:40,595 INFO mapreduce.Job:  map 100% reduce 0%
+2021-05-18 21:39:56,146 INFO mapreduce.Job:  map 100% reduce 100%
+2021-05-18 21:39:58,172 INFO mapreduce.Job: Job job_1621348996087_0001 completed successfully
+2021-05-18 21:39:58,277 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=90
+		FILE: Number of bytes written=451041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=173
+		HDFS: Number of bytes written=56
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2546
+		Total time spent by all reduces in occupied slots (ms)=12818
+		Total time spent by all map tasks (ms)=2546
+		Total time spent by all reduce tasks (ms)=12818
+		Total vcore-milliseconds taken by all map tasks=2546
+		Total vcore-milliseconds taken by all reduce tasks=12818
+		Total megabyte-milliseconds taken by all map tasks=2607104
+		Total megabyte-milliseconds taken by all reduce tasks=13125632
+	Map-Reduce Framework
+		Map input records=4
+		Map output records=12
+		Map output bytes=117
+		Map output materialized bytes=90
+		Input split bytes=104
+		Combine input records=12
+		Combine output records=7
+		Reduce input groups=7
+		Reduce shuffle bytes=90
+		Reduce input records=7
+		Reduce output records=7
+		Spilled Records=14
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=87
+		CPU time spent (ms)=1280
+		Physical memory (bytes) snapshot=489463808
+		Virtual memory (bytes) snapshot=5073174528
+		Total committed heap usage (bytes)=365953024
+		Peak Map Physical memory (bytes)=299917312
+		Peak Map Virtual memory (bytes)=2529959936
+		Peak Reduce Physical memory (bytes)=189546496
+		Peak Reduce Virtual memory (bytes)=2543214592
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=69
+	File Output Format Counters 
+		Bytes Written=56
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -ls
+Found 10 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-18 21:39 output
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+-rw-r--r--   1 hdoop supergroup         69 2021-05-18 21:11 wc.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-18 20:57 wordcount.txt
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -ls output/
+Found 2 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-18 21:39 output/_SUCCESS
+-rw-r--r--   1 hdoop supergroup         56 2021-05-18 21:39 output/part-r-00000
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -cat output/part-rrrr-00000
+cat: `output/part-rrrr-00000': No such file or directory
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -cat output/part-r-00000
+2021-05-18 21:42:22,254 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hello	3
+is	3
+it	1
+sushanth	2
+sushanth.	1
+this	1
+world	1
+hdoop@sushanth:~/eclipse-workspace$ hadoop fs -cat output/part-r-00000
+2021-05-18 21:42:28,603 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hello	3
+is	3
+it	1
+sushanth	2
+sushanth.	1
+this	1
+world	1
+hdoop@sushanth:~/eclipse-workspace$ 
+
