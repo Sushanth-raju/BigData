@@ -1,0 +1,668 @@
+hdoop@sushanth:~$ hdfs dfs -mkdir/sushanth
+-mkdir/sushanth: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+hdoop@sushanth:~$ hdfs dfs -mkdir /sushanth
+mkdir: `/sushanth': File exists
+hdoop@sushanth:~$ hdfs dfs -mkdir /sushanth/
+mkdir: `/sushanth': File exists
+hdoop@sushanth:~$ hdfs dfs -ls
+Found 10 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-18 21:39 output
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+-rw-r--r--   1 hdoop supergroup         69 2021-05-18 21:11 wc.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-18 20:57 wordcount.txt
+hdoop@sushanth:~$ start-dfs.sh
+Starting namenodes on [localhost]
+localhost: namenode is running as process 5617.  Stop it first.
+Starting datanodes
+localhost: datanode is running as process 5760.  Stop it first.
+Starting secondary namenodes [sushanth]
+sushanth: secondarynamenode is running as process 5986.  Stop it first.
+hdoop@sushanth:~$ start-yarn.sh
+Starting resourcemanager
+resourcemanager is running as process 6189.  Stop it first.
+Starting nodemanagers
+localhost: nodemanager is running as process 6338.  Stop it first.
+hdoop@sushanth:~$ eclipse
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/hdoop/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.14.0.20191209-1925.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:7564): Gtk-WARNING **: 21:46:29.118: gtk_widget_size_allocate(): attempt to allocate widget with width 6 and height -6
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:46:29.118: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.700: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.707: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.715: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.732: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.752: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.768: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.786: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.802: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.818: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.836: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.852: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.868: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.884: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.900: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.918: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.935: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.951: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:15.967: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.542: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.555: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.585: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.591: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.608: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.624: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.641: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.657: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.677: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.690: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.708: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.725: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.741: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.757: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.774: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.791: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:23.807: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:7564): Gtk-CRITICAL **: 21:48:31.319: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+hdoop@sushanth:~$ cd Desktop/
+hdoop@sushanth:~/Desktop$ hadoop fs -copyFromLocal sush.csv
+2021-07-09 21:54:54,003 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hdoop@sushanth:~/Desktop$ hadoop fs -ls
+Found 11 items
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:16 empty.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file1.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-05 10:37 file2.txt
+-rw-r--r--   1 hdoop supergroup          4 2021-05-08 17:35 new.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-08 17:38 new1.txt
+drwxr-xr-x   - hdoop supergroup          0 2021-05-18 21:39 output
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 17:41 raju
+-rw-r--r--   1 hdoop supergroup        632 2021-07-09 21:54 sush.csv
+drwxr-xr-x   - hdoop supergroup          0 2021-05-08 16:57 sushanth
+-rw-r--r--   1 hdoop supergroup         69 2021-05-18 21:11 wc.txt
+-rw-r--r--   1 hdoop supergroup          0 2021-05-18 20:57 wordcount.txt
+hdoop@sushanth:~/Desktop$ hadoop jar Employee.jar sush.csv Employee1.txt
+JAR does not exist or is not a normal file: /home/hdoop/Desktop/Employee.jar
+hdoop@sushanth:~/Desktop$ hadoop jar Employee.jar sush.csv Employee1.txt
+JAR does not exist or is not a normal file: /home/hdoop/Desktop/Employee.jar
+hdoop@sushanth:~/Desktop$ hadoop jar Employee.jar sush.csv Employee1.txt
+Exception in thread "main" java.lang.ClassNotFoundException: sush.csv
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:316)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+hdoop@sushanth:~/Desktop$ hadoop jar Employee.jar Employee1.Employee1 sush.csv Employee1.txt
+2021-07-09 21:58:37,586 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 21:58:38,111 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 21:58:38,568 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2021-07-09 21:58:38,661 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hdoop/.staging/job_1625847246254_0001
+2021-07-09 21:58:38,843 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 21:58:39,062 INFO mapred.FileInputFormat: Total input files to process : 1
+2021-07-09 21:58:39,144 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 21:58:39,173 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 21:58:39,201 INFO mapreduce.JobSubmitter: number of splits:2
+2021-07-09 21:58:39,660 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 21:58:39,821 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1625847246254_0001
+2021-07-09 21:58:39,821 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-07-09 21:58:40,154 INFO conf.Configuration: resource-types.xml not found
+2021-07-09 21:58:40,154 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2021-07-09 21:58:40,700 INFO impl.YarnClientImpl: Submitted application application_1625847246254_0001
+2021-07-09 21:58:40,767 INFO mapreduce.Job: The url to track the job: http://sushanth:8088/proxy/application_1625847246254_0001/
+2021-07-09 21:58:40,771 INFO mapreduce.Job: Running job: job_1625847246254_0001
+2021-07-09 21:58:52,974 INFO mapreduce.Job: Job job_1625847246254_0001 running in uber mode : false
+2021-07-09 21:58:52,975 INFO mapreduce.Job:  map 0% reduce 0%
+2021-07-09 21:59:00,086 INFO mapreduce.Job:  map 100% reduce 0%
+2021-07-09 21:59:06,140 INFO mapreduce.Job:  map 100% reduce 100%
+2021-07-09 21:59:06,151 INFO mapreduce.Job: Job job_1625847246254_0001 completed successfully
+2021-07-09 21:59:06,323 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=120
+		FILE: Number of bytes written=677789
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1134
+		HDFS: Number of bytes written=53
+		HDFS: Number of read operations=11
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=8853
+		Total time spent by all reduces in occupied slots (ms)=3433
+		Total time spent by all map tasks (ms)=8853
+		Total time spent by all reduce tasks (ms)=3433
+		Total vcore-milliseconds taken by all map tasks=8853
+		Total vcore-milliseconds taken by all reduce tasks=3433
+		Total megabyte-milliseconds taken by all map tasks=9065472
+		Total megabyte-milliseconds taken by all reduce tasks=3515392
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=9
+		Map output bytes=495
+		Map output materialized bytes=126
+		Input split bytes=186
+		Combine input records=9
+		Combine output records=2
+		Reduce input groups=1
+		Reduce shuffle bytes=126
+		Reduce input records=2
+		Reduce output records=1
+		Spilled Records=4
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=196
+		CPU time spent (ms)=1650
+		Physical memory (bytes) snapshot=786595840
+		Virtual memory (bytes) snapshot=7605293056
+		Total committed heap usage (bytes)=597164032
+		Peak Map Physical memory (bytes)=297357312
+		Peak Map Virtual memory (bytes)=2533761024
+		Peak Reduce Physical memory (bytes)=192524288
+		Peak Reduce Virtual memory (bytes)=2538782720
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=948
+	File Output Format Counters 
+		Bytes Written=53
+hdoop@sushanth:~/Desktop$ hadoop fs -ls Employee1.txt
+Found 2 items
+-rw-r--r--   1 hdoop supergroup          0 2021-07-09 21:59 Employee1.txt/_SUCCESS
+-rw-r--r--   1 hdoop supergroup         53 2021-07-09 21:59 Employee1.txt/part-00000
+hdoop@sushanth:~/Desktop$ hadoop fs -cat Employee1.txt/part-00000
+2021-07-09 21:59:59,722 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+Total no.of employees working in ISE Department : 	9
+hdoop@sushanth:~/Desktop$ cd ..
+hdoop@sushanth:~$ eclipse
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/hdoop/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.14.0.20191209-1925.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:8950): Gtk-WARNING **: 22:01:41.141: gtk_widget_size_allocate(): attempt to allocate widget with width 6 and height -6
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:01:41.141: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.021: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.025: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.037: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.080: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.098: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.123: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.131: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.155: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.164: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.189: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.197: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.223: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.231: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.252: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.264: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.284: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:8950): Gtk-CRITICAL **: 22:04:35.296: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+hdoop@sushanth:~$ eclipse
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/hdoop/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.14.0.20191209-1925.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:9344): Gtk-WARNING **: 22:06:15.814: gtk_widget_size_allocate(): attempt to allocate widget with width 6 and height -6
+
+(Eclipse:9344): Gtk-CRITICAL **: 22:06:15.814: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+hdoop@sushanth:~$ hadoop jar Employee2.jar Employee2.Employee2 sush.csv Employee2.txt
+JAR does not exist or is not a normal file: /home/hdoop/Employee2.jar
+hdoop@sushanth:~$ cd Desktop/
+hdoop@sushanth:~/Desktop$ hadoop jar Employee2.jar Employee2.Employee2 sush.csv Employee2.txt
+2021-07-09 22:08:12,704 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 22:08:12,949 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 22:08:13,151 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2021-07-09 22:08:13,175 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hdoop/.staging/job_1625847246254_0002
+2021-07-09 22:08:13,311 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:08:13,867 INFO mapred.FileInputFormat: Total input files to process : 1
+2021-07-09 22:08:13,936 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:08:13,987 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:08:14,005 INFO mapreduce.JobSubmitter: number of splits:2
+2021-07-09 22:08:14,144 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:08:14,168 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1625847246254_0002
+2021-07-09 22:08:14,168 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-07-09 22:08:14,399 INFO conf.Configuration: resource-types.xml not found
+2021-07-09 22:08:14,399 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2021-07-09 22:08:14,485 INFO impl.YarnClientImpl: Submitted application application_1625847246254_0002
+2021-07-09 22:08:14,535 INFO mapreduce.Job: The url to track the job: http://sushanth:8088/proxy/application_1625847246254_0002/
+2021-07-09 22:08:14,537 INFO mapreduce.Job: Running job: job_1625847246254_0002
+2021-07-09 22:08:23,767 INFO mapreduce.Job: Job job_1625847246254_0002 running in uber mode : false
+2021-07-09 22:08:23,768 INFO mapreduce.Job:  map 0% reduce 0%
+2021-07-09 22:08:29,904 INFO mapreduce.Job:  map 100% reduce 0%
+2021-07-09 22:08:35,954 INFO mapreduce.Job:  map 100% reduce 100%
+2021-07-09 22:08:37,987 INFO mapreduce.Job: Job job_1625847246254_0002 completed successfully
+2021-07-09 22:08:38,120 INFO mapreduce.Job: Counters: 55
+	File System Counters
+		FILE: Number of bytes read=126
+		FILE: Number of bytes written=677810
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1134
+		HDFS: Number of bytes written=57
+		HDFS: Number of read operations=11
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=6913
+		Total time spent by all reduces in occupied slots (ms)=4092
+		Total time spent by all map tasks (ms)=6913
+		Total time spent by all reduce tasks (ms)=4092
+		Total vcore-milliseconds taken by all map tasks=6913
+		Total vcore-milliseconds taken by all reduce tasks=4092
+		Total megabyte-milliseconds taken by all map tasks=7078912
+		Total megabyte-milliseconds taken by all reduce tasks=4190208
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=10
+		Map output bytes=580
+		Map output materialized bytes=132
+		Input split bytes=186
+		Combine input records=10
+		Combine output records=2
+		Reduce input groups=1
+		Reduce shuffle bytes=132
+		Reduce input records=2
+		Reduce output records=1
+		Spilled Records=4
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=185
+		CPU time spent (ms)=1840
+		Physical memory (bytes) snapshot=721317888
+		Virtual memory (bytes) snapshot=7609225216
+		Total committed heap usage (bytes)=555220992
+		Peak Map Physical memory (bytes)=295096320
+		Peak Map Virtual memory (bytes)=2533576704
+		Peak Reduce Physical memory (bytes)=189702144
+		Peak Reduce Virtual memory (bytes)=2543026176
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=948
+	File Output Format Counters 
+		Bytes Written=57
+hdoop@sushanth:~/Desktop$ hadoop fs -ls Employee2.txt
+Found 2 items
+-rw-r--r--   1 hdoop supergroup          0 2021-07-09 22:08 Employee2.txt/_SUCCESS
+-rw-r--r--   1 hdoop supergroup         57 2021-07-09 22:08 Employee2.txt/part-00000
+hdoop@sushanth:~/Desktop$ hadoop fs -cat Employee2.txt/part-00000
+2021-07-09 22:09:27,728 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+Total no.of employees having 5 years of experience : 	10
+hdoop@sushanth:~/Desktop$ eclipse
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/hdoop/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.14.0.20191209-1925.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:10130): Gtk-WARNING **: 22:10:18.285: gtk_widget_size_allocate(): attempt to allocate widget with width 6 and height -6
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:10:18.285: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.725: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.730: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.745: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.796: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.814: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.833: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.847: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.867: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.881: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.897: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.915: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.930: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.948: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.963: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.982: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:11:59.996: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:12:00.751: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:12:00.768: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(Eclipse:10130): Gtk-CRITICAL **: 22:12:00.836: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+hdoop@sushanth:~/Desktop$ hadoop jar Employee3.jar Employee3.Employee3 sush.csv Employee3.txt
+2021-07-09 22:13:36,833 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 22:13:37,080 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+2021-07-09 22:13:37,288 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2021-07-09 22:13:37,312 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hdoop/.staging/job_1625847246254_0003
+2021-07-09 22:13:37,433 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:13:37,591 INFO mapred.FileInputFormat: Total input files to process : 1
+2021-07-09 22:13:37,634 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:13:37,685 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:13:37,733 INFO mapreduce.JobSubmitter: number of splits:2
+2021-07-09 22:13:37,870 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2021-07-09 22:13:37,897 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1625847246254_0003
+2021-07-09 22:13:37,897 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-07-09 22:13:38,107 INFO conf.Configuration: resource-types.xml not found
+2021-07-09 22:13:38,108 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2021-07-09 22:13:38,192 INFO impl.YarnClientImpl: Submitted application application_1625847246254_0003
+2021-07-09 22:13:38,241 INFO mapreduce.Job: The url to track the job: http://sushanth:8088/proxy/application_1625847246254_0003/
+2021-07-09 22:13:38,243 INFO mapreduce.Job: Running job: job_1625847246254_0003
+2021-07-09 22:13:44,373 INFO mapreduce.Job: Job job_1625847246254_0003 running in uber mode : false
+2021-07-09 22:13:44,375 INFO mapreduce.Job:  map 0% reduce 0%
+2021-07-09 22:13:50,478 INFO mapreduce.Job:  map 100% reduce 0%
+2021-07-09 22:13:56,524 INFO mapreduce.Job:  map 100% reduce 100%
+2021-07-09 22:13:57,551 INFO mapreduce.Job: Job job_1625847246254_0003 completed successfully
+2021-07-09 22:13:57,694 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=114
+		FILE: Number of bytes written=677768
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1134
+		HDFS: Number of bytes written=50
+		HDFS: Number of read operations=11
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=7029
+		Total time spent by all reduces in occupied slots (ms)=4093
+		Total time spent by all map tasks (ms)=7029
+		Total time spent by all reduce tasks (ms)=4093
+		Total vcore-milliseconds taken by all map tasks=7029
+		Total vcore-milliseconds taken by all reduce tasks=4093
+		Total megabyte-milliseconds taken by all map tasks=7197696
+		Total megabyte-milliseconds taken by all reduce tasks=4191232
+	Map-Reduce Framework
+		Map input records=20
+		Map output records=5
+		Map output bytes=260
+		Map output materialized bytes=120
+		Input split bytes=186
+		Combine input records=5
+		Combine output records=2
+		Reduce input groups=1
+		Reduce shuffle bytes=120
+		Reduce input records=2
+		Reduce output records=1
+		Spilled Records=4
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=161
+		CPU time spent (ms)=1730
+		Physical memory (bytes) snapshot=778539008
+		Virtual memory (bytes) snapshot=7611756544
+		Total committed heap usage (bytes)=603455488
+		Peak Map Physical memory (bytes)=296480768
+		Peak Map Virtual memory (bytes)=2535866368
+		Peak Reduce Physical memory (bytes)=189841408
+		Peak Reduce Virtual memory (bytes)=2542501888
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=948
+	File Output Format Counters 
+		Bytes Written=50
+hdoop@sushanth:~/Desktop$ hadoop fs -ls Employee3.txt
+Found 2 items
+-rw-r--r--   1 hdoop supergroup          0 2021-07-09 22:13 Employee3.txt/_SUCCESS
+-rw-r--r--   1 hdoop supergroup         50 2021-07-09 22:13 Employee3.txt/part-00000
+hdoop@sushanth:~/Desktop$ hadoop fs -cat Employee3.txt/part-00000
+2021-07-09 22:14:30,815 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+Total no.of employees who lives in Bangalore : 	5
+hdoop@sushanth:~/Desktop$ 
+
+
